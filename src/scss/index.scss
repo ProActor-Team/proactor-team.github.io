@@ -4,65 +4,97 @@ $background-color: #0e0e0e;
 $primary-color: #fff;
 $secondary-color: #ff3c02;
 
-$content-padding-h: 60px;
-$page-padding-t: 66px;
-$logo-padding-l: 60px;
+$content-padding-h: 120px;
+$navbar-padding: 66px 0 0 0;
 
 body {
 	font-family: $font-stack;
 	font-weight: 400;
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 	color: $primary-color;
 	background: $background-color;
-}
-
-.page-header {
 	position: relative;
-	height: 100vh;
-	background: $background-color;
 	overflow-x: hidden;
 }
 
-.page-header-bulb {
+.page-header {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	background: url("../assets/proactor-bulb.svg") no-repeat;
 	background-size: cover;
-	background-position: bottom left $content-padding-h;
+	background-position: bottom left 60px;
+	padding: 0 $content-padding-h;
 }
 
-.page-header-logo-box {
-	position: absolute;
-	top: $page-padding-t;
-	left: $content-padding-h + $logo-padding-l;
+.page-header-navbar {
+	position: relative;
+	margin: $navbar-padding;
+	height: 95px;
 }
 
 .page-header-logo {
-	height: 95px;
+	height: 100%;
+}
+
+.page-header-heading {
+	margin-top: 30px;
+	line-height: 1;
+	font-weight: 500;
+	text-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
+	color: transparent;
+	background-color: rgba(255, 155, 125, 1);
+	-webkit-background-clip: text;
+	background-clip: text;
+}
+
+.heading-text-line1 {
+	display: block;
+	font-size: 9rem;
+	font-weight: 500;
+}
+
+.heading-text-line2 {
+	display: block;
+	font-size: 6.33rem;
+}
+
+.heading-text-line3 {
+	display: block;
+	font-size: 5rem;
+	font-weight: 500;
+}
+
+.page-header-text {
+	margin-top: 30px;
+	width: 600px;
+	line-height: normal;
+	font-size: 1rem;
+	letter-spacing: 0.2rem;
+	line-height: 1.3;
+	text-align: left;
 }
 
 // MOBILE
 
 $m-content-padding-h: 8px;
-$m-page-padding-t: 40px;
-$m-logo-padding-l: 11px;
+$m-navbar-padding-h: 40px 11px 0 11px;
 
 @media screen and (max-width: 768px) {
-	.page-header-bulb {
+	.page-header {
 		background-position: top 200px right;
 		height: max(1200px, 100vh);
+		padding: $m-content-padding-h;
 	}
 
-	.page-header-logo-box {
-		position: absolute;
-		top: $m-page-padding-t;
-		left: $m-content-padding-h + $m-logo-padding-l;
-	}
-	
-	.page-header-logo {
+	.page-header-navbar {
+		margin: $m-navbar-padding-h;
 		height: 106px;
+	}
+
+	.page-header-heading {
+		margin-top: 102px;
 	}
 }
