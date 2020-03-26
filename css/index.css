@@ -1,3 +1,54 @@
+body {
+  font-family: "Mariupol", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #fff;
+  background: #0e0e0e;
+}
 
+.page-header {
+  position: relative;
+  height: 100vh;
+  background: #0e0e0e;
+  overflow-x: hidden;
+}
+
+.page-header-bulb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../assets/proactor-bulb.svg") no-repeat;
+  background-size: cover;
+  background-position: bottom left 60px;
+}
+
+.page-header-logo-box {
+  position: absolute;
+  top: 66px;
+  left: 120px;
+}
+
+.page-header-logo {
+  height: 95px;
+}
+
+@media screen and (max-width: 768px) {
+  .page-header-bulb {
+    background-position: top 200px right;
+    height: max(1200px, 100vh);
+  }
+
+  .page-header-logo-box {
+    position: absolute;
+    top: 40px;
+    left: 19px;
+  }
+
+  .page-header-logo {
+    height: 106px;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */
