@@ -34,9 +34,9 @@ body {
   margin-top: 30px;
   line-height: 1;
   font-weight: 500;
-  text-shadow: 0px 0px 2px white;
+  text-shadow: 0.7px 0.7px 1px white;
   color: transparent;
-  background-color: #ff9b7d;
+  background-color: rgba(255, 155, 125, 0.8);
   -webkit-background-clip: text;
   background-clip: text;
 }
