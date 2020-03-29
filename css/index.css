@@ -23,9 +23,19 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../assets/proactor-bulb.svg") no-repeat;
+  background: #ff3c02;
+}
+
+.page-header-bg-overlay {
+  position: absolute;
+  z-index: -500;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0e0e0e;
   background-size: cover;
-  background-position: bottom left 3.125vw;
+  clip-path: polygon(0 0, 1180px 0, 3.125vw 100%, 0 100%);
 }
 
 .page-header-navbar {
@@ -142,14 +152,89 @@ body {
   border: solid 1px rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (max-width: 1600px) {
+  .page-header-bg-overlay {
+    clip-path: polygon(-380px 0, 953.5353535354px 0, calc(3.125vw - 380px) 100%, -380px 100%);
+  }
+
+  .heading-text-line1 {
+    display: block;
+    font-size: 7rem;
+    font-weight: 500;
+  }
+
+  .heading-text-line2 {
+    display: block;
+    font-size: 5rem;
+  }
+
+  .heading-text-line3 {
+    display: block;
+    font-size: 3.95rem;
+    font-weight: 500;
+  }
+
+  .page-header-text {
+    margin-top: 30px;
+    width: 28rem;
+  }
+
+  .page-header-cta {
+    margin-top: 50px;
+    width: 28rem;
+  }
+
+  .btn-rounded:link,
+.btn-rounded:visited {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.8rem;
+    margin: 0 20px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .heading-text-line1 {
+    display: block;
+    font-size: 6.5rem;
+    font-weight: 500;
+  }
+
+  .heading-text-line2 {
+    display: block;
+    font-size: 4.5rem;
+  }
+
+  .heading-text-line3 {
+    display: block;
+    font-size: 3.55rem;
+    font-weight: 500;
+  }
+
+  .page-header-text {
+    display: none;
+  }
+
+  .page-header-cta {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .btn-rounded:link,
+.btn-rounded:visited {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.8rem;
+    margin: 0 6vw 6vh 6vw;
+  }
+}
 @media screen and (max-width: 768px) {
   .page-header {
     height: max(1200px, 100vh);
     padding: 40px 8px 0 8px;
   }
 
-  .page-header-bg {
-    background-position: top 200px right;
+  .page-header-bg-overlay {
+    clip-path: polygon(0 0, calc(956px - 768px + 100vw) 0, calc(-500px - 768px + 100vw) 100%);
   }
 
   .page-header-navbar {
@@ -159,6 +244,55 @@ body {
 
   .page-header-heading {
     margin-top: 102px;
+  }
+
+  .heading-text-line1 {
+    display: block;
+    font-size: 4.5rem;
+    font-weight: 500;
+  }
+
+  .heading-text-line2 {
+    display: block;
+    font-size: 4rem;
+  }
+
+  .heading-text-line3 {
+    display: block;
+    font-size: 3.7rem;
+    font-weight: 500;
+  }
+}
+@media screen and (max-width: 480px) {
+  .page-header-heading {
+    margin-top: 60px;
+  }
+
+  .heading-text-line1 {
+    display: block;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+  .heading-text-line2 {
+    display: block;
+    font-size: 2.8rem;
+  }
+
+  .heading-text-line3 {
+    display: block;
+    font-size: 2.23rem;
+    font-weight: 500;
+  }
+
+  .btn-rounded:link,
+.btn-rounded:visited {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.8rem;
+    display: block;
+    width: 50vw;
+    min-width: 200px;
+    margin: 0 auto 6vh auto;
   }
 }
 
