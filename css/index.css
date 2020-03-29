@@ -9,20 +9,27 @@ body {
 }
 
 .page-header {
+  position: relative;
+  width: max(100vw, 380px);
+  height: 100vh;
+  min-height: 1080px;
+  padding: 66px 6.25vw 0 6.25vw;
+}
+
+.page-header-bg {
   position: absolute;
+  z-index: -1000;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: url("../assets/proactor-bulb.svg") no-repeat;
   background-size: cover;
-  background-position: bottom left 60px;
-  padding: 0 120px;
+  background-position: bottom left 3.125vw;
 }
 
 .page-header-navbar {
   position: relative;
-  margin: 66px 0 0 0;
   height: 95px;
 }
 
@@ -60,7 +67,7 @@ body {
 
 .page-header-text {
   margin-top: 30px;
-  width: 600px;
+  width: 37.5rem;
   line-height: normal;
   font-size: 1rem;
   letter-spacing: 0.2rem;
@@ -68,20 +75,114 @@ body {
   text-align: left;
 }
 
+.page-header-cta {
+  margin-top: 88px;
+  width: 37.5rem;
+  text-align: center;
+}
+
+.btn-rounded:link,
+.btn-rounded:visited {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.4375rem;
+  font-weight: 500;
+  padding: 0.8rem 2.2rem;
+  letter-spacing: 1.38px;
+  text-align: center;
+  border-radius: 100px;
+  text-transform: lowercase;
+  margin: 0 30px;
+  position: relative;
+}
+
+.btn-rounded::before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: -13px;
+  height: calc(100% + 26px);
+  width: calc(100% + 26px);
+  border-radius: 100px;
+  z-index: -1;
+}
+
+.btn-rounded::after {
+  content: "";
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 200%;
+  width: 100%;
+  border-radius: 15%;
+  background: linear-gradient(to bottom, transparent, #55464a 50%, transparent);
+}
+
+.btn-primary {
+  color: #969696;
+  background: linear-gradient(to top, #e7e3e1, #f4f1ec);
+  text-shadow: -0.7px 0.7px 0 rgba(255, 255, 255, 0.75);
+  box-shadow: 0px 1px 3px 0 rgba(41, 35, 32, 0.3);
+}
+
+.btn-primary::before {
+  box-shadow: -0.7px 0.7px 106px 0 rgba(203, 216, 28, 0.64);
+  background-image: linear-gradient(to top, #ccff02, #7cff9e);
+}
+
+.btn-secondary {
+  color: #fff;
+  background: transparent;
+  box-shadow: 0px 1px 3px 0 rgba(41, 35, 32, 0.3), inset 0px 1px 3px 0 rgba(41, 35, 32, 0.2);
+  border: solid 1px #ff3c02;
+}
+
+.btn-secondary::before {
+  border: solid 1px rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 1600px) {
+  :root {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  :root {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  :root {
+    font-size: 10px;
+  }
+}
 @media screen and (max-width: 768px) {
+  :root {
+    font-size: 8px;
+  }
+
   .page-header {
-    background-position: top 200px right;
     height: max(1200px, 100vh);
-    padding: 8px;
+    padding: 40px 8px 0 8px;
+  }
+
+  .page-header-bg {
+    background-position: top 200px right;
   }
 
   .page-header-navbar {
-    margin: 40px 11px 0 11px;
+    margin: 0 11px;
     height: 106px;
   }
 
   .page-header-heading {
     margin-top: 102px;
+  }
+}
+@media screen and (max-width: 480px) {
+  :root {
+    font-size: 6px;
   }
 }
 
