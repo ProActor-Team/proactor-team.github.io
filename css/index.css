@@ -35,7 +35,7 @@ body {
   height: 100%;
   background: #0e0e0e;
   background-size: cover;
-  clip-path: polygon(0 0, 1180px 0, 3.125vw 100%, 0 100%);
+  clip-path: polygon(0 0, 1280px 0, 3.125vw 100%, 0 100%);
 }
 
 .page-header-navbar {
@@ -154,7 +154,7 @@ body {
 
 @media screen and (max-width: 1600px) {
   .page-header-bg-overlay {
-    clip-path: polygon(-380px 0, 953.5353535354px 0, calc(3.125vw - 380px) 100%, -380px 100%);
+    clip-path: polygon(-380px 0, 1034.3434343434px 0, calc(3.125vw - 380px) 100%, -380px 100%);
   }
 
   .heading-text-line1 {
