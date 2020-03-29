@@ -109,7 +109,7 @@ body {
 
 .btn-rounded::after {
   content: "";
-  opacity: 0.1;
+  opacity: 0.06;
   position: absolute;
   top: 0;
   left: 0;
@@ -142,26 +142,7 @@ body {
   border: solid 1px rgba(255, 255, 255, 0.6);
 }
 
-@media screen and (max-width: 1600px) {
-  :root {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 1280px) {
-  :root {
-    font-size: 12px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  :root {
-    font-size: 10px;
-  }
-}
 @media screen and (max-width: 768px) {
-  :root {
-    font-size: 8px;
-  }
-
   .page-header {
     height: max(1200px, 100vh);
     padding: 40px 8px 0 8px;
@@ -178,11 +159,6 @@ body {
 
   .page-header-heading {
     margin-top: 102px;
-  }
-}
-@media screen and (max-width: 480px) {
-  :root {
-    font-size: 6px;
   }
 }
 
