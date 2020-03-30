@@ -32,18 +32,75 @@
 				<li><a class="btn-header-phone" href="#">8 988 769 65 00 <img src="assets/smartphone.png"></a></li>
 			</ul>
 		</nav>
-		<h1 class="page-header-heading">
-			<span class="heading-text-line1">Организация</span>
-			<span class="heading-text-line2">фестивалей</span>
-			<span class="heading-text-line3">и мероприятий</span>
-		</h1>
-		<article class="page-header-text">
-			Обеспечение и проведение музыкальных мероприятий и фестивалей любой сложности. Полное сопровождение, осуществление и чуткое исполнение ваших пожеланий&nbsp;&ndash; наш основной приоритет. Фестивали под нашим руководством это всегда зрелище и непередаваемые эмоции как со стороны посетителей так и наших клиентов.
-		</article>
-		<section class="page-header-cta">
-			<a class="btn-rounded btn-primary" href="#">Позвонить</a>
-			<a class="btn-rounded btn-secondary" href="#">Написать</a>
-		</section>
+		<div class="page-header-content-wrapper">
+			<h1 class="page-header-heading">
+				<span class="heading-text-line1">Организация</span>
+				<span class="heading-text-line2">фестивалей</span>
+				<span class="heading-text-line3">и мероприятий</span>
+			</h1>
+			<section class="page-header-text">
+				Обеспечение и проведение музыкальных мероприятий и фестивалей любой сложности. Полное сопровождение, осуществление и чуткое исполнение ваших пожеланий&nbsp;&ndash; наш основной приоритет. Фестивали под нашим руководством это всегда зрелище и непередаваемые эмоции как со стороны посетителей так и наших клиентов.
+			</section>
+			<section class="page-header-cta">
+				<a class="btn-rounded btn-primary" href="#">Позвонить</a>
+				<a class="btn-rounded btn-secondary" href="#">Написать</a>
+			</section>
+			<section class="page-header-video-wrapper">
+				<div class="page-header-video-cta">
+					<span>Смотри<br>как мы это делаем</span>
+					<div class="play-button-wrapper" onclick="togglePlay('how-we-do-it-play-btn');">
+						<img height="69" src="assets/play button.svg">
+					</div>
+				</div>
+				<div class="page-header-video-player">
+					<div class="page-header-video-source-wrapper">
+						<video id="how-we-do-it-video" class="page-header-video-source" controls>
+						   <source width="948" height="533" src="assets/how-we-do-it.mp4" type="video/mp4">
+						</video>
+					</div>
+					<div class="page-header-video-controls">
+						<span id="how-we-do-it-play-btn" class="play" title="Играть" onclick="togglePlay('how-we-do-it-play-btn');">
+						</span>
+						<div id="how-we-do-it-progress" class="progress" min="0" max="100" value="0"></div>
+					</div>
+					<script type="text/javascript">
+						document.addEventListener("DOMContentLoaded", () => initializeMediaPlayer("how-we-do-it-video"), false);
+						var mediaPlayer;
+						function initializeMediaPlayer(videoId) {
+							mediaPlayer = document.getElementById(videoId);
+							mediaPlayer.controls = false;
+							mediaPlayer.addEventListener('timeupdate', () => updateProgressBar("how-we-do-it-progress"), false);
+							mediaPlayer.addEventListener('ended', () => updateBtn("how-we-do-it-play-btn", "play"), false);
+						}
+						function togglePlay(btnId) {
+							if (mediaPlayer.paused || mediaPlayer.ended) {
+								mediaPlayer.play();
+								updateBtn(btnId, "pause");
+							}
+							else {
+								mediaPlayer.pause();
+								updateBtn(btnId, "play");
+							}
+						}
+						function updateBtn(btnId, state) {
+							let btn = document.getElementById(btnId);
+							if (state === "play") {
+								btn.title = "Играть";
+								btn.className = "play";
+							} else if (state === "pause") {
+								btn.title = "Пауза";
+								btn.className = "pause"
+							}
+						}
+						function updateProgressBar(progressId) {
+							var progressBar = document.getElementById(progressId);
+							var percentage = Math.floor((100 / mediaPlayer.duration) * mediaPlayer.currentTime);
+							progressBar.style.width = percentage + "%";
+						}
+					</script>
+				 </div>
+			</section>
+		</div>
 	</header>
 	<div style="width: 100%; height: 800px;" class="placeholder">&nbsp;</div>
 </body>
