@@ -66,10 +66,36 @@ body {
 .page-header-navbar {
 	position: relative;
 	height: 9.5rem;
+	width: 100%;
+}
+
+.page-header-logo-box {
+	display: inline-block;
 }
 
 .page-header-logo {
 	height: 100%;
+	margin-right: 2rem;
+}
+
+.page-header-nav-links {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.page-header-nav-links li {
+	display: inline-block;
+	height: 100%;
+	line-height: 9.5rem;
+	margin-left: 3rem;
+}
+
+.page-header-nav-links li a:link,
+.page-header-nav-links li a:visited {
+	font-size: 2rem;
+	color: $primary-color;
+	text-decoration: none;
+	letter-spacing: .2rem;
 }
 
 .page-header-heading {
