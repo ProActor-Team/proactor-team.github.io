@@ -345,6 +345,108 @@ body {
 	width: 192rem;
 }
 
+.page-section {
+	padding: 18rem $content-padding-h 9rem $content-padding-h;
+}
+
+.page-section h2 {
+	border: solid .2rem $primary-color;
+	font-size: 8.5rem;
+	font-weight: 500;
+	letter-spacing: .85rem;
+	color: $primary-color;
+	line-height: 8.5rem;
+	padding: 0 5rem 1.5rem 5rem;
+	display: inline-block;
+	position: relative;
+}
+
+.page-section h2::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 3.2rem;
+	height: 3.2rem;
+	background: $secondary-color;
+	clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+.plans {
+	margin-top: 6.4rem;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+}
+
+.plan {
+	background-color: $secondary-color;
+	position: relative;
+	padding: 10.5rem 4rem 7rem 4rem;
+}
+
+.plan::before {
+	content: "";
+	width: 9rem;
+	height: 9rem;
+	background: #000;
+	clip-path: polygon(100% 0, 100% 100%, 0 100%);
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.plan::after {
+	content: "";
+	width: 4.4rem;
+	height: 4.4rem;
+	background: url("../assets/camera icon.png") no-repeat;
+	background-size: contain;
+	position: absolute;
+	top: 1.8rem;
+	left: 2.5rem;
+}
+
+.plan h3 {
+	font-size: 4rem;
+	color: $primary-color;
+	font-weight: 500;
+	text-align: center;
+	margin: auto;
+}
+
+.plan img {
+	display: block;
+	height: 10.2rem;
+	margin: auto;
+}
+
+.plan p {
+	margin: 5.2rem auto 0 auto;
+	width: 33rem;
+	height: 17rem;
+	font-size: 1.6rem;
+	text-align: left;
+	color: #ffffff;  
+}
+
+.plan button {
+	display: block;
+	position: relative;
+	margin: auto;
+	border: none;
+	font-size: 2.85rem;
+	font-weight: 500;
+	line-height: 1.16;
+	text-align: center;
+	color: #ffffff;
+	background-color: #000;
+	text-decoration: underline;
+	text-transform: lowercase;
+	padding: 1.5rem 3.6rem 1.7rem 3.6rem;
+	box-shadow: -5.7px 5.7px 0 0 #0343f9;
+}
+
 .btn-rounded:link,
 .btn-rounded:visited {
 	text-decoration: none;
