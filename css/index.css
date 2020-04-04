@@ -1,5 +1,5 @@
 :root {
-  font-size: 62.5%;
+  font-size: 0.52vw;
 }
 
 body {
@@ -53,22 +53,27 @@ body {
 
 .page-header-logo {
   margin-right: 2rem;
+  height: 9.5rem;
 }
 
-.page-header-nav-links {
+.page-header-navbar .page-header-nav-links {
   display: inline-block;
   white-space: nowrap;
   vertical-align: top;
+  margin-top: 3.25rem;
 }
 
-.page-header-nav-links li {
+.page-header-navbar .page-header-nav-links li {
   display: inline-block;
   margin-left: 3rem;
-  line-height: 9.5rem;
 }
 
-.page-header-nav-links li a:link,
-.page-header-nav-links li a:visited {
+.page-header-navbar .page-header-nav-links li a {
+  padding: 1rem 0;
+}
+
+.page-header-navbar .page-header-nav-links li a:link,
+.page-header-navbar .page-header-nav-links li a:visited {
   font-size: 2rem;
   color: #fff;
   text-decoration: none;
@@ -76,7 +81,20 @@ body {
   position: relative;
 }
 
-.page-header-nav-links li a:hover::after {
+.page-header-navbar .page-header-nav-links:hover li:not(:hover) a::after {
+  background-color: transparent;
+}
+
+.page-header-navbar .page-header-nav-links:hover li:not(:hover) a {
+  color: #999999;
+}
+
+.page-header-navbar .page-header-nav-links:hover li.active:not(:hover) a::after {
+  background-color: #9a7367;
+}
+
+.page-header-navbar .page-header-nav-links li:hover a::after,
+.page-header-navbar .page-header-nav-links li.active a::after {
   position: absolute;
   left: 0;
   bottom: -0.3rem;
@@ -86,7 +104,7 @@ body {
   background-color: #ff3c02;
 }
 
-.page-header-comm-links {
+.page-header-navbar .page-header-comm-links {
   position: absolute;
   right: 0;
   top: 50%;
@@ -94,10 +112,19 @@ body {
   display: block;
 }
 
-.page-header-comm-links li {
+.page-header-navbar .page-header-comm-links li {
   display: inline-block;
   margin-left: 2rem;
   vertical-align: middle;
+}
+
+.page-header-navbar .page-header-comm-links .whatsapp,
+.page-header-navbar .page-header-comm-links .viber {
+  height: 3.6rem;
+}
+
+.page-header-navbar .page-header-comm-links .phone {
+  height: 2.3rem;
 }
 
 .btn-header-phone:link,
@@ -201,6 +228,10 @@ body {
   position: relative;
 }
 
+.play-button-wrapper img {
+  height: 6.9rem;
+}
+
 .play-button-wrapper::before {
   content: "";
   z-index: -1;
@@ -244,7 +275,7 @@ body {
   position: absolute;
   top: -0.36rem;
   left: 0;
-  background: linear-gradient(to bottom, transparent, rgba(54, 36, 30, 0.8));
+  background: linear-gradient(to bottom, transparent, #36241e);
 }
 
 .page-header-video-source {
