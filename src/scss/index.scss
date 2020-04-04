@@ -329,19 +329,20 @@ body {
 	transform: rotateZ(90deg);
 }
 
-.progress {
-	position: absolute;
-	bottom: .4rem;
-	left: 0;
-	opacity: 0;
-	background-color: rgba($secondary-color, .8);
-	height: .6rem;
-	width: 0%;
-}
-
 .page-header-video-controls:hover .pause,
 .page-header-video-controls:hover .progress {
 	opacity: 1;
+}
+
+.page-bg-proactor {
+	position: absolute;
+	z-index: -1;
+	top: 95rem;
+	left: 0;
+}
+
+.page-bg-proactor img {
+	width: 192rem;
 }
 
 .btn-rounded:link,
@@ -405,4 +406,14 @@ body {
 
 .btn-secondary::before {
 	border: solid .1rem rgba(255, 255, 255, 0.6);
+}
+
+.progress {
+	position: absolute;
+	bottom: .4rem;
+	left: 0;
+	opacity: 0;
+	background-color: rgba($secondary-color, .8);
+	height: .6rem;
+	width: 0%;
 }
