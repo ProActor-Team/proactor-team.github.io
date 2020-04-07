@@ -6,7 +6,7 @@
 		{
 			"label": "Sass Watch",
 			"type": "shell",
-			"command": "sass --watch src/scss:css",
+			"command": "sass --watch src/scss/index.scss:css/index.css",
 			"problemMatcher": []
 		}
 	]

@@ -1,3 +1,43 @@
+@keyframes blink {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes blink {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes blink {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes blink {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-o-keyframes blink {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
 :root {
   font-size: 0.52vw;
 }
@@ -305,8 +345,8 @@ body {
   transform: rotateZ(90deg);
 }
 
-.page-header-video-controls:hover .pause,
-.page-header-video-controls:hover .progress {
+.page-header-video-player:hover .page-header-video-controls .pause,
+.page-header-video-player:hover .page-header-video-controls .progress {
   opacity: 1;
 }
 
@@ -359,6 +399,7 @@ body {
   background-color: #ff3c02;
   position: relative;
   padding: 10.5rem 4rem 7rem 4rem;
+  text-align: center;
 }
 
 .plan::before {
@@ -389,12 +430,13 @@ body {
   font-weight: 500;
   text-align: center;
   margin: auto;
+  line-height: normal;
 }
 
 .plan img {
   display: block;
   height: 10.2rem;
-  margin: auto;
+  margin: 3rem auto 0 auto;
 }
 
 .plan p {
@@ -406,20 +448,21 @@ body {
   color: #ffffff;
 }
 
-.plan button {
-  display: block;
+.btn-more {
+  display: inline-block;
   position: relative;
-  margin: auto;
-  border: none;
   font-size: 2.85rem;
   font-weight: 500;
   line-height: 1.16;
+  padding: 1.5rem 3.6rem 1.7rem 3.6rem;
+}
+
+.btn-black-blue {
+  text-decoration: underline;
+  text-transform: lowercase;
   text-align: center;
   color: #ffffff;
   background-color: #000;
-  text-decoration: underline;
-  text-transform: lowercase;
-  padding: 1.5rem 3.6rem 1.7rem 3.6rem;
   box-shadow: -5.7px 5.7px 0 0 #0343f9;
 }
 
@@ -530,6 +573,91 @@ body {
   z-index: -1;
 }
 
+.huge-red-cta {
+  padding: 18rem 12rem 20rem 12rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff3c02;
+  clip-path: polygon(0 0, 100% 12rem, 100% 100%, 0 calc(100% - 12rem));
+}
+
+.huge-red-cta h2 {
+  display: inline-block;
+  font-size: 7.1rem;
+  font-weight: 500;
+  letter-spacing: 0.85rem;
+  color: #fff;
+  line-height: 8.5rem;
+  padding: 0 5rem 1.5rem 5rem;
+  position: relative;
+  width: 70rem;
+}
+
+.btn-huge-red-cta {
+  display: inline-block;
+  position: relative;
+  font-size: 8rem;
+  font-weight: 500;
+  padding: 1.5rem 8rem 1.7rem 8rem;
+  margin-right: 40rem;
+  text-decoration: none;
+}
+
+.about-proactor article {
+  margin-top: 6.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.about-proactor article p {
+  width: 90rem;
+  font-size: 2.3rem;
+  text-align: left;
+}
+
+.about-proactor article p .delimeter {
+  background-color: #ff3c02;
+  width: 8rem;
+  height: 1rem;
+  display: block;
+  margin-top: 1.6rem;
+}
+
+.about-proactor article img {
+  height: 36rem;
+  margin-right: 15rem;
+}
+
+.our-partners .logos {
+  margin-top: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-partners .logos img {
+  margin: 0 8rem;
+  filter: grayscale(100%);
+}
+
+.our-partners .logos img:hover {
+  filter: none;
+}
+
+.bs-logo {
+  height: 14rem;
+}
+
+.nvrsk-logo {
+  height: 15rem;
+}
+
+.wr-logo {
+  height: 5.3rem;
+}
+
 .btn-rounded:link,
 .btn-rounded:visited {
   text-decoration: none;
@@ -599,6 +727,18 @@ body {
   background-color: rgba(255, 60, 2, 0.8);
   height: 0.6rem;
   width: 0%;
+}
+
+.blinking-cursor {
+  margin-left: 0.3rem;
+  padding-left: 4rem;
+  display: inline;
+  background-color: #fff;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
 }
 
 /*# sourceMappingURL=index.css.map */
